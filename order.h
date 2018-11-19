@@ -9,6 +9,12 @@ class Order
 		int size_;
 		double maxPrice_;
 		long int orderTime_;
+
+		int id_;
+		friend class OrderQueue;
+		/*
+			The id works in conjunction with the order queue to remove / retrieve specific orders via the overriden function removeOrder / retrieveOrder
+		*/
 	
 	public:
 		Order( const std::string& buyerName, int size, double maxPrice, long int orderTime);
